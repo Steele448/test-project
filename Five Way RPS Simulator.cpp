@@ -27,7 +27,7 @@ public:
 int wins = 0;
 int loss = 0;
 int ties = 0;
-void wincheck(string p1, string p2)
+void wincheck(string p1, string p2) //Used for determining the winner of the game
 {
 	if (p1 == "Knight" && (p2 == "Swordsman" || p2 == "Thief"))
 	{
@@ -208,16 +208,16 @@ int main()
 	string again = "Again";
 	string name;
 	string oppenent;
-	string pick;
-	string opp;
+	string pick; //user's pick
+	string opp; //computer's pick
 	random_device rd;
 
 	cout << "Welcome to Medieval Battle!" << endl;
-	while (choice != "Start")
+	while (choice != "Start") //To allow the user to view the info screen multiple times
 	{
 		next = "ui";
 		cout << "When you are ready to begin type 'Start'" << endl;
-		cout << "To learn more about a character type in the\nnumber that corresponds with thier name:" << endl;
+		cout << "To learn more about a character type in the\number that corresponds with thier name:" << endl;
 		cout << "Knight 1, Swordsman 2, Mage 3, Thief 4, Archer 5" << endl;
 		cout << ">";
 		cin >> choice;
@@ -325,7 +325,7 @@ int main()
 		cout << "Archer!" << endl;
 		Sleep(100);
 		cout << ">";
-		cin >> pick;
+		cin >> pick; //following programs store the users string variable for later use
 		if (pick == "Knight")
 		{
 			string pick = "Knight";
@@ -351,7 +351,7 @@ int main()
 			string pick = "Archer";
 			cout << name << " chose the Archer!" << endl;
 		}
-		int computer = rd() % 5 + 1;
+		int computer = rd() % 5 + 1; //computer's pick; randomly generated
 		Sleep(250);
 		if (computer == 1)
 		{
@@ -379,7 +379,7 @@ int main()
 			cout << oppenent << " chose the Archer!" << endl;
 		}
 		Sleep(1000);
-		wincheck(pick, opp);
+		wincheck(pick, opp); //wincheck runs here and determines the winner using the previously chosen variables
 		Sleep(500);
 		cout << "To play again type 'Again'" << endl;
 		cout << ">";
