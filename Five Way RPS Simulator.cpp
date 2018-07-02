@@ -304,7 +304,7 @@ int main()
 	cout << ">";
 	cin >> oppenent;
 	Sleep(200);
-	cout << "Ahh yes the dreaed, " << oppenent << "!" << endl;
+	cout << "Ahh yes the dreaded, " << oppenent << "!" << endl;
 	Sleep(500);
 	while (again == "Again")
 	{
